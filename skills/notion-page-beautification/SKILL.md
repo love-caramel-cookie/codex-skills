@@ -81,6 +81,7 @@ Allowed transformations:
 - Put formulas in equation blocks when supported.
 - Use toggles for long background explanation, derivations, or supplementary context, but do not hide key conclusions too deeply.
 - Use a small number of dividers between major modules only.
+- If some simple chemical formulas are designed, such as O2 and SiO2, then automatically use the inline formulas to change these numbers into superscripts or subscripts, which conforms to the standard usage norms of chemical formulas.
 
 Forbidden transformations:
 
