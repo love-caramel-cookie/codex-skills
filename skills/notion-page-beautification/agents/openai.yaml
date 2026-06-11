@@ -1,0 +1,10 @@
+interface:
+  display_name: "Notion Page Beautification Skill"
+  short_description: "Beautify Notion pages while preserving every detail."
+  default_prompt: "Use $notion-page-beautification to read a Notion page style, wait for my text, then format and write it without losing content."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "notion"
+      description: "Notion connector access for reading and updating user-provided Notion pages."
