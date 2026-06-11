@@ -138,6 +138,44 @@ Default color discipline:
 
 Use color sparingly. Simplicity and clarity are more important than decoration.
 
+## Minimal Formatting Principle
+
+This is a strict rule.
+
+Most body text should remain normal plain text.
+
+The page should look like a clean research note, not a decorated poster.
+
+Target ratio:
+
+- 90% of body text should remain plain text.
+- Only less than 10% of content should receive visual emphasis.
+- Tables should mostly use plain text in cells.
+- Parameters should usually remain plain text unless they are the main conclusion or a critical warning.
+- The user will manually mark additional highlights later if needed.
+- Do not color multiple words in the same sentence.
+- Do not apply multiple styles to the same text unless absolutely necessary.
+
+Do not proactively add many:
+
+- Highlights.
+- Inline code.
+- Bold text.
+- Underlines.
+- Colored text.
+
+Use these only when they clearly improve structure or prevent misunderstanding.
+
+If unsure whether to emphasize something, do not emphasize it.
+
+## Inline Code Usage Rule
+
+Inline code is easy to overuse. Use it very carefully.
+
+Inline code should only be used for content that is truly code-like, machine-like, or needs exact software recognition.
+
+Do not fill tables with inline code, highlights, and colored fragments.
+
 ## Notion Update Rules
 
 Default behavior:
