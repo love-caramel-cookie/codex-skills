@@ -17,7 +17,7 @@ skills/
 Install a skill in Codex with:
 
 ```text
-$skill-installer install https://github.com/sszbOvO/codex-skills/tree/main/skills/<skill-name>
+$skill-installer install https://github.com/love-caramel-cookie/codex-skills/tree/main/skills/<skill-name>
 ```
 
 Restart Codex after installing a skill.
