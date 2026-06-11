@@ -13,9 +13,9 @@ Core principle: format the content; do not rewrite the content.
 
 ### 1. Read the Notion page first
 
-When the user provides a Notion page URL or page ID:
+When the user provides a Notion page URL or page title:
 
-1. Fetch the page content with the Notion connector.
+1. Read the content of the page.
 2. Inspect the existing style before making any changes.
 3. Determine whether the top of the page already contains beautified content.
 4. Report briefly that the page was read and that you are waiting for the raw text.
@@ -77,7 +77,6 @@ Allowed transformations:
 - Convert parallel items into bullet or numbered lists.
 - Convert parameters, dimensions, experimental conditions, and result comparisons into tables.
 - Put code, commands, KLayout parameters, Silvaco decks, terminal commands, and similar technical blocks in code fences.
-- Put short parameters, file names, layer names, variable names, and commands in inline code.
 - Put formulas in equation blocks when supported.
 - Use toggles for long background explanation, derivations, or supplementary context, but do not hide key conclusions too deeply.
 - Use a small number of dividers between major modules only.
