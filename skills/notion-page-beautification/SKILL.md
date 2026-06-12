@@ -11,6 +11,22 @@ Core principle: format the content; do not rewrite the content.
 
 ## Workflow
 
+## Required Notion Operation Method
+
+hen the user asks to modify, beautify, replace, or update an existing Notion page, prioritize editing through the currently logged-in Notion web page in the Codex in-app browser.
+
+Do not first attempt Notion connector update tools or `ntn` CLI for writing unless the user explicitly asks for them.
+
+Preferred method:
+
+1. Open or use the already-open Notion page in the Codex in-app browser.
+2. Read the visible page content and structure from the browser.
+3. Create a full-page backup duplicate before any modification.
+4. Edit the original page directly through the Notion web UI.
+5. Verify the final page content in the browser after editing.
+
+Use Notion connector or `ntn` only as fallback tools, or for operations that the browser method cannot complete.
+
 ### 1. Read the Notion page first
 
 When the user provides a Notion page URL or page title:
@@ -178,6 +194,26 @@ Do not fill tables with inline code, highlights, and colored fragments.
 
 ## Notion Update Rules
 
+## Backup Rule
+
+Before making any change to an existing Notion page, always create a full-page backup duplicate first.
+
+This rule applies to all write operations, including:
+
+- Beautifying the whole page.
+- Replacing the whole page body.
+- Replacing only one section.
+- Inserting new beautified content into part of the page.
+- Appending new content to the end of the page.
+
+The backup must preserve the entire original page before modification.
+
+Place the backup duplicate in the same Notion parent location or directory as the original page whenever possible.
+
+Do not modify the original page until the backup has been created successfully.
+
+After finishing, report the backup page URL or clearly state where the backup was created.
+
 Default behavior:
 
 - If the user gives raw text and no insertion location, append the beautified content to the end of the page.
@@ -186,12 +222,13 @@ Default behavior:
 - If the user asks to replace the whole page or "modify the entire page", replace the full body content.
 - If the user asks "only return the formatted content" or similar, do not call a Notion update tool.
 
-Before replacing content:
+Before modifying content:
 
-1. Fetch the page first.
-2. Use exact existing snippets for targeted search-and-replace updates.
-3. Preserve child pages and databases if present in fetched page content.
-4. If a Notion update warns that child content would be deleted, stop and ask the user for confirmation; do not set destructive deletion flags automatically.
+1. Read the current page content and structure first, preferably through the Notion web page in the Codex in-app browser.
+2. Create a full-page backup duplicate in the same parent location before making any edit.
+3. For targeted section edits, identify the exact existing section in the original page before replacing it.
+4. Preserve child pages and databases if present.
+5. If any tool warns that child content would be deleted, stop and ask the user for confirmation; do not set destructive deletion flags automatically.
 
 When appending:
 
@@ -203,7 +240,11 @@ When appending:
 
 After finishing, state briefly:
 
+After finishing, state briefly:
+
 - The page was read and existing style was referenced.
+- A full-page backup was created before modification.
+- The backup page URL or backup location.
 - The new content was beautified.
 - Whether the Notion page was updated.
 - The write location: page end, specified location, section replacement, or full-page replacement.
